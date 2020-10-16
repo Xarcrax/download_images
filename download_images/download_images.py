@@ -170,7 +170,6 @@ def getSearchUrl(params):
                  "&safe=" + SafeSearch +
                  "&as_filetype=" + fileType +
                  "&tbs=" + aspectRatio + " " + usageRights)
-    print(searchUrl)
     return searchUrl
 
 def getImageUrls(params, url):
