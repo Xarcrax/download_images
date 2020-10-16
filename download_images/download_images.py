@@ -1,4 +1,5 @@
 import urllib.request
+import ssl
 import os
 import sys, argparse
 import re
@@ -215,7 +216,7 @@ def getImageUrls(params, url):
         if maxImages < resultsNo:
             print("Retrieving", maxImages, "urls")
         else:
-            imagesToBeRetrieved = resultsIndex + resultNo
+            imagesToBeRetrieved = resultsIndex + resultsNo
             print("Retrieving", imagesToBeRetrieved, "urls for now...")
 
         for thumbnail in thumbnails[resultsIndex:resultsNo]:
@@ -269,13 +270,13 @@ def downloadImages(params, imageUrls):
             with urllib.request.urlopen(imageUrl) as url:
                 with open(imgQuery + ("%03d"%i) + ".jpg", "wb") as f:
                     f.write(url.read())
-        except HTTPError as e:
+        except urllib.error.HTTPError:
             print("Failed on image", i, "proceeding to next")
 
-        except URLError as e:
+        except urllib.error.URLError:
             print("Failed on image", i, "proceeding to next")
 
-        except ssl.CertificateError as e:
+        except ssl.CertificateError:
             print("Failed on image", i, "proceeding to next")
 
         i += 1
@@ -289,6 +290,7 @@ def main(args):
     url = getSearchUrl(params)
     imageUrls = getImageUrls(params, url)
     downloadImages(params, imageUrls)
+    os.chdir("..")
     
 if __name__ == "__main__":     
     main(sys.argv[1:])

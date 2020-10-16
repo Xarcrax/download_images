@@ -4,7 +4,7 @@ with open("README.md", "r") as readmeFile:
     README = readmeFile.read()
 
 setuptools.setup(
-    name="download_images-Xarcrax", # Replace with your own username
+    name="download_images",
     version="1.0",
     author="Akhilesh Chandorkar",
     author_email="akhilesh.chandorkar@gmail.com",
