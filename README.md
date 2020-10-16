@@ -95,3 +95,6 @@ Google Images is a search engine that merely indexes images and allows you to fi
 Images published in the United States are automatically copyrighted by their owners, even if they do not explicitly carry a copyright warning. You may not reproduce copyright images without their owner's permission, except in "fair use" cases, or you could risk running into lawyer's warnings, cease-and-desist letters, and copyright suits. Please be very careful before its usage! 
 
 Use this code judiciously.
+
+## Support Us
+To show your support for this project you can [thank me](https://saythanks.io/to/akhilesh.chandorkar%40gmail.com) or [buy me a coffee](https://ko-fi.com/xarcrax)
