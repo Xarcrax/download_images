@@ -14,10 +14,11 @@ Download download_images from [my github](https://github.com/Xarcrax/download_im
 
 ## Usage
 
-
+```
 import download_images
 
-download_images.main(["-q", "<query>", <args>"])#searches google for images from args and downloads them
+download_images.main(["-q", "<query>", <args>"]) searches google for images from args and downloads them
+```
 
 ### Example
 An example use is given on [my github](https://github.com/Xarcrax/download_images) in the examples repository
